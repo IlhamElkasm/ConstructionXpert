@@ -4,34 +4,24 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+
+
   <servlet>
-  	<servlet-name>ServletCreeProj</servlet-name>
-  	<display-name>ServletCreeProj</display-name>
-  	<description></description>
-  	<servlet-class>Web.ServletCreeProj</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>servletAddProjet</servlet-name>
-  	<display-name>servletAddProjet</display-name>
-  	<description></description>
-  	<servlet-class>Web.Projet.servletAddProjet</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>CreerProjet</servlet-name>
-  	<display-name>CreerProjet</display-name>
-  	<description></description>
-  	<servlet-class>Web.Projet.CreerProjet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>ServletCreeProj</servlet-name>
-  	<url-pattern>/ServletCreeProj</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>servletAddProjet</servlet-name>
-  	<url-pattern>/servletAddProjet</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>CreerProjet</servlet-name>
-  	<url-pattern>/CreerProjet</url-pattern>
-  </servlet-mapping>
+        <servlet-name>CreerProjet</servlet-name>
+        <servlet-class>Web.Projet.CreerProjet</servlet-class>
+    </servlet>
+   <servlet-mapping>
+    <servlet-name>CreerProjet</servlet-name>
+     <url-pattern>/add_Projet</url-pattern>
+   </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Afficherprojet</servlet-name>
+        <servlet-class>Web.Projet.Afficherprojet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Afficherprojet</servlet-name>
+        <url-pattern>/Afficherprojet</url-pattern>
+    </servlet-mapping>
+
 </web-app>

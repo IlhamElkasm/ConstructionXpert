@@ -224,7 +224,7 @@
             <div class="nav_list">
                 <a href="index.jsp" class="nav_link active"> <i class='bx bx-grid-alt nav_icon'></i>
                     <span class="nav_name">Dashboard</span> </a>
-                <a href="Afficher_Projet.jsp" class="nav_link"> <i class='bx bx-cog nav_icon'></i>
+                <a href="Afficherprojet" class="nav_link"> <i class='bx bx-cog nav_icon'></i>
                     <span class="nav_name"> Projets</span> </a>
                 <a href="#" class="nav_link"> <i class='bx bx-task nav_icon'></i>
                     <span class="nav_name">Tâches</span> </a>
