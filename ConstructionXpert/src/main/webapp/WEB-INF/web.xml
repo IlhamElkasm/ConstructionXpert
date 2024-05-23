@@ -24,4 +24,21 @@
         <url-pattern>/Afficherprojet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>editProjet</servlet-name>
+        <servlet-class>Web.Projet.editProjet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>editProjet</servlet-name>
+        <url-pattern>/editProjet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>deleteProjet</servlet-name>
+        <servlet-class>Web.Projet.DeleteProject</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deleteProjet</servlet-name>
+        <url-pattern>/deleteProjet</url-pattern>
+    </servlet-mapping>
 </web-app>

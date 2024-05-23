@@ -8,56 +8,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<%@include file="index.jsp"%>
-<!-- Include Bootstrap CSS -->
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
-   <style>
-       .contenu{
-           display: flex;
-           justify-content:space-between;
-       }
-     .btnaj{
-         padding-top:100px;
-         margin-bottom: 10px;
-     }
-     .btnaj a{
-          width:100%;
-     }
-
-   </style>
+    <meta charset="ISO-8859-1">
+    <%@include file="index.jsp"%>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .contenu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .btnaj{
+            padding-top:100px;
+            margin-bottom: 10px;
+        }
+        .btnaj a {
+            width: 100%;
+        }
+        .card-deck {
+            margin: 20px;
+        }
+    </style>
 </head>
 <body>
-  <div class="btnaj">
-	<a href="Creer_projet.jsp" class="btn btn-info">Créer Project</a>
-  </div>
-
-  <div class="contenu">
-  <%
-      List<Projet> listProjet = (List<Projet>) request.getAttribute("shows");
-      for (Projet projet : listProjet){
-  %>
-  <div class="card-deck">
-        <div class="card text-center shadow mb-3" style="max-width: 18rem;">
-            <div class="card-header">
-                <h4><%= projet.getNom_proj() %></h4>
-                <h5><%= projet.getBudget()%></h5>
-            </div>
-            <div class="card-body">
-                <p class="card-text"><%= projet.getDescription()%></p>
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Date de début : <span><%= projet.getDate_debut()%></span></li>
-                <li class="list-group-item">Date de fin : <span><%= projet.getDate_fin()%></span></li>
-            </ul>
-            <div class="card-footer">
-                <a href="edit_projet.jsp" class="btn btn-info">Edit Project</a>
-                <a href="#" class="btn btn-danger">Supprimer Project</a>
+<div class="container">
+    <div class="btnaj">
+        <a href="Creer_projet.jsp" class="btn btn-info">Créer Project</a>
+    </div>
+    <div class="contenu">
+        <%
+            List<Projet> listProjet = (List<Projet>) request.getAttribute("shows");
+            for (Projet projet : listProjet) {
+        %>
+        <div class="card-deck">
+            <div class="card text-center shadow mb-3" style="max-width: 18rem;">
+                <div class="card-header">
+                    <h4><%= projet.getNom_proj() %></h4>
+                    <h5><%= projet.getBudget() %> ?</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text"><%= projet.getDescription() %></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Date de début : <span><%= projet.getDate_debut() %></span></li>
+                    <li class="list-group-item">Date de fin : <span><%= projet.getDate_fin() %></span></li>
+                </ul>
+                <div class="card-footer">
+                    <a href="editProjet?id_Proj=<%= projet.getId_Proj() %>" class="btn btn-info">Edit Project</a>
+                    <a href="deleteProjet?id_Proj=<%= projet.getId_Proj() %>" class="btn btn-danger">Supprimer Project</a>
+                </div>
             </div>
         </div>
-  </div>
-  <%}%>
-  </div>
+        <% } %>
+    </div>
+</div>
+<!-- Include Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
