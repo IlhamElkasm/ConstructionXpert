@@ -56,7 +56,7 @@
                 <div class="card-footer">
                     <a href="editProjet?id_Proj=<%= projet.getId_Proj() %>" class="btn btn-info">Edit</a>
                     <a href="deleteProjet?id_Proj=<%= projet.getId_Proj() %>" class="btn btn-danger">Supprimer</a>
-                    <a href="deleteProjet?id_Proj=<%= projet.getId_Proj() %>" class="btn btn-danger">Tache</a>
+                    <a href="AfficherTache?id_Proj=<%= projet.getId_Proj() %>" class="btn btn-danger">Tache</a>
 
                 </div>
             </div>

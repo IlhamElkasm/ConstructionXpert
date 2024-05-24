@@ -12,7 +12,6 @@ public class TacheDaoImpl implements tacheDao{
 
     @Override
     public Tache CreerTache(Tache tache) throws SQLException, ClassNotFoundException {
-
         Connection connection = Connection_JDBC.getConnection();
         String sql = "INSERT INTO tâches (description,date_debut, date_fin, statut,id_Proj) " +
                 "VALUES ( ?, ?, ?, ?, ?)";
@@ -44,7 +43,7 @@ public class TacheDaoImpl implements tacheDao{
                 String statut = resultat.getString("statut");
                 Integer id_Proj = resultat.getInt("id_Proj");
 
-                Tache tache = new Tache(id_Tach,description, date_debut, date_fin,id_Proj,statut);
+                Tache tache = new Tache(id_Tach,description,date_debut,date_fin,statut,id_Proj);
                 taches.add(tache);
             }
         }
@@ -88,13 +87,7 @@ public class TacheDaoImpl implements tacheDao{
         ResultSet resultSet = statement.executeQuery();
         while (resultSet.next()) {
             tache = new Tache(
-                    resultSet.getInt("id_Tach"),
-                    resultSet.getString("description"),
-                    resultSet.getString("date_debut"),
-                    resultSet.getString("date_fin"),
-                    resultSet.getInt("id_Proj"),
-                    resultSet.getString("statut")
-          );
+            );
         }
         return tache;
     }

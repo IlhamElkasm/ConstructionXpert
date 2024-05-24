@@ -36,7 +36,7 @@
 <body>
 <div class="container">
     <div class="btnaj">
-        <a href="CreerTache.jsp" class="btn btn-info">Créer Project</a>
+        <a href="CreerTache.jsp?id_Proj=<%=request.getParameter("id_Proj") %>" class="btn btn-info">Créer Tache</a>
     </div>
     <div class="contenu">
         <%

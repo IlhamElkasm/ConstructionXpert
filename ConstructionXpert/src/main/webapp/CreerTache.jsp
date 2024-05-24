@@ -20,11 +20,6 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<%
-    // Retrieve the list of projects to populate the dropdown
-    List<Projet> listProjet = (List<Projet>) request.getAttribute("shows");
-
-%>
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -34,6 +29,7 @@
                 </div>
                 <div class="card-body">
                     <form action="CreerTache" method="post">
+                        <input type="hidden" name="id_Proj" value="<%= request.getParameter("id_Proj") %>">
                         <div class="form-group">
                             <label for="description">Description</label>
                             <input type="text" class="form-control" id="description" name="description" placeholder="description">
@@ -46,24 +42,12 @@
                             <label for="date_fin">Date_fin</label>
                             <input type="date" class="form-control" id="date_fin" name="date_fin" placeholder="date_fin">
                         </div>
-
                         <div class="form-group">
                             <select class="form-control" id="Statu" name="Statu">
                                 <option disabled selected>Statu</option>
                                 <option>To do</option>
                                 <option>Doing</option>
                                 <option>Done</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <select class="form-control" id="Projet" name="Projet">
-                                <% if (listProjet != null) { %>
-                                <% for (Projet projet : listProjet) { %>
-                                <option value="<%= projet.getId_Proj()%>"><%= projet.getNom_proj()%></option>
-                                <% } %>
-                                <% } else { %>
-                                <option disabled>Aucun projet disponible</option>
-                                <% } %>
                             </select>
                         </div>
                         <div class="container test-center">

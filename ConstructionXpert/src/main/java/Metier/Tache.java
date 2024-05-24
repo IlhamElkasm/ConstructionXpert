@@ -17,7 +17,16 @@ public class Tache {
         this.statut = statut;
     }
 
-    public Tache(int id_Tach,String description, String date_debut, String date_fin, Integer id_Proj, String statut) {
+    public Tache( int id_Tach, String description, String date_debut, String date_fin,String statut, Integer id_Proj) {
+        this.date_debut = date_debut;
+        this.date_fin = date_fin;
+        this.description = description;
+        this.id_Proj = id_Proj;
+        this.id_Tach = id_Tach;
+        this.statut = statut;
+    }
+
+    public Tache() {
         this.date_debut = date_debut;
         this.date_fin = date_fin;
         this.description = description;
