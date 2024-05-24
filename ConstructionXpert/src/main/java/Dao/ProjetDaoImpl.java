@@ -52,7 +52,8 @@ public class ProjetDaoImpl implements projetDao {
     @Override
     public void editProjet(Projet projet) throws SQLException, ClassNotFoundException {
         Connection connection = Connection_JDBC.getConnection();
-        String sql = "UPDATE projets SET  nom_proj=?, description=?, date_debut=?, date_fin=?, budget=? WHERE id_Proj=?";
+        String sql = "UPDATE projets SET  nom_proj=?, description=?, date_debut=?, date_fin=?, budget=? WHERE id_" +
+                "Proj=?";
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, projet.getNom_proj());
             statement.setString(2, projet.getDescription());

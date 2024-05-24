@@ -4,7 +4,7 @@
 <%@ page import="Metier.Projet" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
          pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix ="c" uri ="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,10 +41,10 @@
             for (Projet projet : listProjet) {
         %>
         <div class="card-deck">
-            <div class="card text-center shadow mb-3" style="max-width: 18rem;">
+            <div class="card text-center shadow mb-3" style="max-width: 20rem;">
                 <div class="card-header">
                     <h4><%= projet.getNom_proj() %></h4>
-                    <h5><%= projet.getBudget() %> ?</h5>
+                    <h5><%= projet.getBudget() %> $</h5>
                 </div>
                 <div class="card-body">
                     <p class="card-text"><%= projet.getDescription() %></p>
@@ -54,8 +54,10 @@
                     <li class="list-group-item">Date de fin : <span><%= projet.getDate_fin() %></span></li>
                 </ul>
                 <div class="card-footer">
-                    <a href="editProjet?id_Proj=<%= projet.getId_Proj() %>" class="btn btn-info">Edit Project</a>
-                    <a href="deleteProjet?id_Proj=<%= projet.getId_Proj() %>" class="btn btn-danger">Supprimer Project</a>
+                    <a href="editProjet?id_Proj=<%= projet.getId_Proj() %>" class="btn btn-info">Edit</a>
+                    <a href="deleteProjet?id_Proj=<%= projet.getId_Proj() %>" class="btn btn-danger">Supprimer</a>
+                    <a href="deleteProjet?id_Proj=<%= projet.getId_Proj() %>" class="btn btn-danger">Tache</a>
+
                 </div>
             </div>
         </div>

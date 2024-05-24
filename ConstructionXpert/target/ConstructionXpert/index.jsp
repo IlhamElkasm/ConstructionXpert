@@ -68,7 +68,7 @@
             position: fixed;
             top: 0;
             left: 0;
-            display: fixe;
+            display: fixed;
             align-items: center;
             justify-content: space-between;
             padding: 0 1rem;
@@ -226,7 +226,7 @@
                     <span class="nav_name">Dashboard</span> </a>
                 <a href="Afficherprojet" class="nav_link"> <i class='bx bx-cog nav_icon'></i>
                     <span class="nav_name"> Projets</span> </a>
-                <a href="#" class="nav_link"> <i class='bx bx-task nav_icon'></i>
+                <a href="AfficherTache" class="nav_link"> <i class='bx bx-task nav_icon'></i>
                     <span class="nav_name">Tâches</span> </a>
                 <a href="#" class="nav_link"> <i class='bx bx-box nav_icon'></i>
                     <span class="nav_name">Ressources</span> </a>

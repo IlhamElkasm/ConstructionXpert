@@ -5,7 +5,7 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
 
-
+<!--    Projet -->
   <servlet>
         <servlet-name>CreerProjet</servlet-name>
         <servlet-class>Web.Projet.CreerProjet</servlet-class>
@@ -41,4 +41,27 @@
         <servlet-name>deleteProjet</servlet-name>
         <url-pattern>/deleteProjet</url-pattern>
     </servlet-mapping>
+
+
+
+   <!--     tache  -->
+    <servlet>
+        <servlet-name>AfficherTache</servlet-name>
+        <servlet-class>Web.Tache.AfficherTache</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AfficherTache</servlet-name>
+        <url-pattern>/AfficherTache</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CreerTache</servlet-name>
+        <servlet-class>Web.Tache.CreerTache</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreerTache</servlet-name>
+        <url-pattern>/CreerTache</url-pattern>
+    </servlet-mapping>
+
+
 </web-app>

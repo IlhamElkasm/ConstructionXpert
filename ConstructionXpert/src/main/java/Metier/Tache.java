@@ -7,26 +7,24 @@ public class Tache {
     private String date_debut;
     private String date_fin;
     private String statut;
-    Projet projetI;
+   private  Integer id_Proj;
 
-
-    public Tache(String date_debut, String date_fin, String description, int id_Tach, Projet projetI, String statut) {
+    public Tache(String date_debut, String date_fin, String description, Integer id_Proj, String statut) {
         this.date_debut = date_debut;
         this.date_fin = date_fin;
         this.description = description;
+        this.id_Proj = id_Proj;
+        this.statut = statut;
+    }
+
+    public Tache(int id_Tach,String description, String date_debut, String date_fin, Integer id_Proj, String statut) {
+        this.date_debut = date_debut;
+        this.date_fin = date_fin;
+        this.description = description;
+        this.id_Proj = id_Proj;
         this.id_Tach = id_Tach;
-        this.projetI = projetI;
         this.statut = statut;
     }
-
-    public Tache(String date_debut, String date_fin, String description, Projet projetI, String statut) {
-        this.date_debut = date_debut;
-        this.date_fin = date_fin;
-        this.description = description;
-        this.projetI = projetI;
-        this.statut = statut;
-    }
-
 
     public String getDate_debut() {
         return date_debut;
@@ -60,12 +58,12 @@ public class Tache {
         this.id_Tach = id_Tach;
     }
 
-    public Projet getProjetI() {
-        return projetI;
+    public Integer getId_Proj() {
+        return id_Proj;
     }
 
-    public void setProjetI(Projet projetI) {
-        this.projetI = projetI;
+    public void setId_Proj(Integer id_Proj) {
+        this.id_Proj = id_Proj;
     }
 
     public String getStatut() {
@@ -84,7 +82,7 @@ public class Tache {
                 ", description='" + description + '\'' +
                 ", date_fin='" + date_fin + '\'' +
                 ", statut='" + statut + '\'' +
-                ", projetI=" + projetI +
+                ", id_Proj=" + id_Proj +
                 '}';
     }
 }
