@@ -3,27 +3,27 @@ package Metier;
 public class Tache {
 
     private int id_Tach;
-    private String description;
     private String date_debut;
     private String date_fin;
-    private String statut;
+    private String description;
+    private String statu;
    private  Integer id_Proj;
 
-    public Tache(String date_debut, String date_fin, String description, Integer id_Proj, String statut) {
+    public Tache(String date_debut, String date_fin, String description, Integer id_Proj, String statu) {
         this.date_debut = date_debut;
         this.date_fin = date_fin;
         this.description = description;
         this.id_Proj = id_Proj;
-        this.statut = statut;
+        this.statu = statu;
     }
 
-    public Tache( int id_Tach, String description, String date_debut, String date_fin,String statut, Integer id_Proj) {
+    public Tache( int id_Tach, String date_debut, String date_fin,String description,String statu, Integer id_Proj) {
         this.date_debut = date_debut;
         this.date_fin = date_fin;
         this.description = description;
         this.id_Proj = id_Proj;
         this.id_Tach = id_Tach;
-        this.statut = statut;
+        this.statu = statu;
     }
 
     public Tache() {
@@ -32,7 +32,7 @@ public class Tache {
         this.description = description;
         this.id_Proj = id_Proj;
         this.id_Tach = id_Tach;
-        this.statut = statut;
+        this.statu = statu;
     }
 
     public String getDate_debut() {
@@ -75,12 +75,12 @@ public class Tache {
         this.id_Proj = id_Proj;
     }
 
-    public String getStatut() {
-        return statut;
+    public String getStatu() {
+        return statu;
     }
 
-    public void setStatut(String statut) {
-        this.statut = statut;
+    public void setStatu(String statut) {
+        this.statu = statut;
     }
 
     @Override
@@ -90,7 +90,7 @@ public class Tache {
                 ", id_Tach=" + id_Tach +
                 ", description='" + description + '\'' +
                 ", date_fin='" + date_fin + '\'' +
-                ", statut='" + statut + '\'' +
+                ", statut='" + statu + '\'' +
                 ", id_Proj=" + id_Proj +
                 '}';
     }

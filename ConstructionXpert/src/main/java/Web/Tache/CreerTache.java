@@ -30,14 +30,12 @@ public class CreerTache extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-     Tache tachee = new Tache();
-        String description = request.getParameter("description");
         String date_debut = request.getParameter("date_debut");
         String date_fin = request.getParameter("date_fin");
-        String statut = request.getParameter("statut");
+        String description = request.getParameter("description");
+        String statut = request.getParameter("Statu");
         Integer id_Proj = Integer.parseInt(request.getParameter("id_Proj"));
-        tachee.setId_Proj(Integer.parseInt(request.getParameter("id_Proj")));
-        System.out.println("lllllllllll"+id_Proj);
+//
 
 
         TacheDaoImpl tacheDao = new TacheDaoImpl();
@@ -50,7 +48,7 @@ public class CreerTache extends HttpServlet {
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
-        response.sendRedirect("AfficherTache?id_projet=" + id_Proj);
+        response.sendRedirect("AfficherTache");
 
         //this.getServletContext().getRequestDispatcher("AfficherTache").forward(request, response);
 

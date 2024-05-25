@@ -55,16 +55,14 @@
                     </p>
                 </div>
                 <div class="form-group">
-                    <select class="form-control" id="Statu" name="Statu">
-                        <p><strong>Statut</strong><%= tache.getStatut()%></p>
-                    </select>
+                        <p><strong>Statu</strong><%= tache.getStatu()%></p>
                 </div>
                 <div class="form-group">
                    <p><strong>Project</strong><%= tache.getId_Proj()%></p>
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-info">Edit Project</a>
-                    <a href="#" class="btn btn-danger">Supprimer Project</a>
+                    <a href="EditTache?id_Tach= <%= tache.getId_Tach() %>" class="btn btn-info">Edit Project</a>
+                    <a href="DeleteTache?id_Tach=<%= tache.getId_Tach() %>" class="btn btn-danger">Supprimer Project</a>
                 </div>
             </div>
         </div>

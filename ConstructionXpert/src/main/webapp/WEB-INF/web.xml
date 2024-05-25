@@ -62,6 +62,22 @@
         <servlet-name>CreerTache</servlet-name>
         <url-pattern>/CreerTache</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>DeleteTache</servlet-name>
+        <servlet-class>Web.Tache.DeleteTache</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteTache</servlet-name>
+        <url-pattern>/DeleteTache</url-pattern>
+    </servlet-mapping>
 
+    <servlet>
+        <servlet-name>EditTache</servlet-name>
+        <servlet-class>Web.Tache.EditTache</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditTache</servlet-name>
+        <url-pattern>/EditTache</url-pattern>
+    </servlet-mapping>
 
 </web-app>

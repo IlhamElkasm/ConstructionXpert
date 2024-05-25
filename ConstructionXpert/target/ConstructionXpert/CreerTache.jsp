@@ -31,10 +31,6 @@
                     <form action="CreerTache" method="post">
                         <input type="hidden" name="id_Proj" value="<%= request.getParameter("id_Proj") %>">
                         <div class="form-group">
-                            <label for="description">Description</label>
-                            <input type="text" class="form-control" id="description" name="description" placeholder="description">
-                        </div>
-                        <div class="form-group">
                             <label for="date_debut">Date_debut</label>
                             <input type="date" class="form-control" id="date_debut" name="date_debut" placeholder="date_debut">
                         </div>
@@ -43,11 +39,15 @@
                             <input type="date" class="form-control" id="date_fin" name="date_fin" placeholder="date_fin">
                         </div>
                         <div class="form-group">
+                            <label for="description">Description</label>
+                            <input type="text" class="form-control" id="description" name="description" placeholder="description">
+                        </div>
+                        <div class="form-group">
                             <select class="form-control" id="Statu" name="Statu">
                                 <option disabled selected>Statu</option>
-                                <option>To do</option>
-                                <option>Doing</option>
-                                <option>Done</option>
+                                <option value="To do">To do</option>
+                                <option value="Doing">Doing</option>
+                                <option value="Done">Done</option>
                             </select>
                         </div>
                         <div class="container test-center">
