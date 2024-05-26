@@ -34,17 +34,17 @@ public class EditTache extends HttpServlet{
 
             //appele de aafichage de list
             Integer id_Tach = Integer.valueOf(request.getParameter("id_Tach"));
-            Integer id_Proj = Integer.valueOf(request.getParameter("id_Proj"));
             String date_debut = request.getParameter("date_debut");
             String date_fin = request.getParameter("date_fin");
             String description = request.getParameter("description");
             String statut =request.getParameter("statut");
+            Integer id_Proj = Integer.valueOf(request.getParameter("id_Proj"));
 
             Tache tache = new Tache(id_Tach, date_debut, date_fin,description, statut,id_Proj);
             TacheDaoImpl tacheDAO = new TacheDaoImpl();
             try {
                 tacheDAO.EditTache(tache);
-                request.setAttribute("shows", tacheDAO.AfficheTache());
+                request.setAttribute("AffiTa", tacheDAO.AfficheTache());
             } catch (SQLException e) {
                 e.printStackTrace();
 

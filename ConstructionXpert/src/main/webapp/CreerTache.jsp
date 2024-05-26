@@ -24,7 +24,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header bg-primary text-white">
+                <div class="card-header bg-warning text-white">
                     <h2 class="card-title">Creer Projet</h2>
                 </div>
                 <div class="card-body">
@@ -51,7 +51,7 @@
                             </select>
                         </div>
                         <div class="container test-center">
-                            <button type="submit" class="btn btn-success btn-block">Add</button>
+                            <button type="submit" class="btn btn-success btn-warning">Add</button>
                         </div>
                     </form>
                 </div>

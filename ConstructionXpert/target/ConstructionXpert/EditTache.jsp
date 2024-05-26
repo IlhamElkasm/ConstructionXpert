@@ -40,12 +40,13 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header bg-primary text-white">
+                <div class="card-header bg-warning text-white">
                     <h2 class="card-title">Creer Projet</h2>
                 </div>
                 <div class="card-body">
                     <form action="EditTache" method="post">
                         <input type="hidden" name="id_Proj" value="<%= tache.getId_Tach()%>">
+                        <input type="hidden" name="id_Proj" value="<%= request.getParameter("id_Proj") %>">
                         <div class="form-group">
                             <label for="date_debut">Date_debut</label>
                             <input type="date" class="form-control" id="date_debut" name="date_debut" placeholder="date_debut" value="<%= tache.getDate_debut()%>">
@@ -66,11 +67,8 @@
                                 <option value="Done">Done</option>
                             </select>
                         </div>
-                        <div class="form-group">
-                            <input type="text" name="id_Proj" value="<%= request.getParameter("id_Proj") %>">
-                        </div>
                         <div class="container test-center">
-                            <button type="submit" class="btn btn-success btn-block">Add</button>
+                            <button type="submit" class="btn btn-success btn-warning">Add</button>
                         </div>
                     </form>
                 </div>

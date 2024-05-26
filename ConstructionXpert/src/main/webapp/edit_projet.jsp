@@ -5,7 +5,6 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<%@include file="index.jsp" %>
 <!-- Include Bootstrap CSS -->
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
@@ -21,7 +20,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header bg-primary text-white">
+                <div class="card-header bg-warning text-white">
                     <h2 class="card-title">Edit Projet</h2>
                 </div>
                 <div class="card-body">
@@ -51,7 +50,7 @@
                             <input type="date" class="form-control" id="date_fin" name="date_fin" placeholder="date_fin" value="<%= projet.getDate_fin()%>">
                         </div>
                         <div class="container test-center">
-                            <button type="submit" class="btn btn-success btn-block">Edit</button>
+                            <button type="submit" class="btn btn-success btn-warning">Edit</button>
                         </div>
                     </form>
                 </div>

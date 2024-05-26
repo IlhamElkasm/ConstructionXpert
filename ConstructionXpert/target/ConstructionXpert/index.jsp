@@ -78,7 +78,7 @@
         }
 
         .header_toggle {
-            color: var(--first-color);
+            color: #1C5EBC;
             font-size: 1.5rem;
             cursor: pointer
         }
@@ -102,7 +102,7 @@
             left: -30%;
             width: var(--nav-width);
             height: 100vh;
-            background-color: rgb(241, 38, 241);
+            background-color: #1C5EBC;
             padding: .5rem 1rem 0 0;
             transition: .5s;
             z-index: var(--z-fixed)
@@ -131,11 +131,11 @@
 
         .nav_logo-icon {
             font-size: 1.25rem;
-            color: var(--white-color)
+            color: #FFC042;
         }
 
         .nav_logo-name {
-            color: var(--white-color);
+            color: #FFC042;
             font-weight: 700
         }
 
@@ -187,7 +187,9 @@
 
             .header {
                 height: calc(var(--header-height) + 1rem);
-                padding: 0 2rem 0 calc(var(--nav-width) + 2rem)
+                padding: 0 2rem 0 calc(var(--nav-width) + 2rem);
+                background-color: #F0E3B6;
+
             }
 
             .header_img {
@@ -212,6 +214,18 @@
                 padding-left: calc(var(--nav-width) + 188px)
             }
         }
+        .home{
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .home .imge{
+                width:100%;
+                height: 50%;
+        }
+        .home .title2{
+            margin-top: 10%;
+        }
     </style>
 </head>
 
@@ -222,17 +236,31 @@
     <div class="l-navbar" id="nav-bar">
         <nav class="nav">
             <div class="nav_list">
-                <a href="index.jsp" class="nav_link active"> <i class='bx bx-grid-alt nav_icon'></i>
+                <a href="index.jsp" class="nav_link active"> <i class='bx bx-grid-alt nav_icon text-warning'></i>
                     <span class="nav_name">Dashboard</span> </a>
-                <a href="Afficherprojet" class="nav_link"> <i class='bx bx-cog nav_icon'></i>
+                <a href="Afficherprojet" class="nav_link"> <i class='bx bx-cog nav_icon text-warning'></i>
                     <span class="nav_name"> Projets</span> </a>
-                <a href="AfficherTache" class="nav_link"> <i class='bx bx-task nav_icon'></i>
+                <a href="AfficherTache" class="nav_link"> <i class='bx bx-task nav_icon text-warning'></i>
                     <span class="nav_name">Tâches</span> </a>
-                <a href="#" class="nav_link"> <i class='bx bx-box nav_icon'></i>
+                <a href="#" class="nav_link"> <i class='bx bx-box nav_icon text-warning'></i>
                     <span class="nav_name">Ressources</span> </a>
             </div>
         </nav>
     </div>
+    <main>
+        <div class="home">
+           <div class="title2">
+               <h2 class="title">Welcome to
+                   <br>
+                   <span style="color:#F0E3B6"> ConstructionXpert</span>
+                   <br> Services</h2>
+           </div>
+
+            <img src="ConstructionXpert.png" class="imge">
+
+        </div>
+
+    </main>
     <!--Container Main end-->
     <script type='text/javascript'
         src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js'></script>
