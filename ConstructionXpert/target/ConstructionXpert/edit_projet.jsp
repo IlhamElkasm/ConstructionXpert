@@ -27,27 +27,27 @@
                     <form action="editProjet" method="post">
 
                         <div>
-                            <input type="hidden"  id="id_Proj" name="id_Proj" value="<%= projet.getId_Proj()%>">
+                            <input type="hidden"  id="id_Proj" name="id_Proj" value="<%= projet.getId_Proj()%>" required>
                         </div>
                         <div class="form-group">
                             <label for="nom_proj">Nom_Projet</label>
-                            <input type="text" class="form-control" id="nom_proj" name="nom_proj" placeholder="nom_proj" value="<%= projet.getNom_proj() %>">
+                            <input type="text" class="form-control" id="nom_proj" name="nom_proj" placeholder="nom_proj" value="<%= projet.getNom_proj() %>" required>
                         </div>
                         <div class="form-group">
                             <label for="budget">budget</label>
-                            <input type="number" class="form-control" id="budget" name="budget" placeholder="budget" value="<%= projet.getBudget()%>">
+                            <input type="number" class="form-control" id="budget" name="budget" placeholder="budget" value="<%= projet.getBudget()%>" required>
                         </div>
                         <div class="form-group">
                             <label for="description">Description</label>
-                            <input type="text" class="form-control" id="description" name="description" placeholder="Description" value="<%= projet.getDescription()%>">
+                            <input type="text" class="form-control" id="description" name="description" placeholder="Description" value="<%= projet.getDescription()%>" required>
                         </div>
                         <div class="form-group">
                             <label for="date_debut">Date_debut</label>
-                            <input type="date" class="form-control" id="date_debut" name="date_debut" placeholder="date_debut" value="<%= projet.getDate_debut()%>">
+                            <input type="date" class="form-control" id="date_debut" name="date_debut" placeholder="date_debut" value="<%= projet.getDate_debut()%>" required>
                         </div>
                         <div class="form-group">
                             <label for="date_fin">Date_fin</label>
-                            <input type="date" class="form-control" id="date_fin" name="date_fin" placeholder="date_fin" value="<%= projet.getDate_fin()%>">
+                            <input type="date" class="form-control" id="date_fin" name="date_fin" placeholder="date_fin" value="<%= projet.getDate_fin()%>" required>
                         </div>
                         <div class="container test-center">
                             <button type="submit" class="btn btn-success btn-warning">Edit</button>

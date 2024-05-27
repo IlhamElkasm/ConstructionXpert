@@ -29,18 +29,18 @@
                 </div>
                 <div class="card-body">
                     <form action="CreerTache" method="post">
-                        <input type="hidden" name="id_Proj" value="<%= request.getParameter("id_Proj") %>">
+                        <input type="hidden" name="id_Proj" value="<%= request.getParameter("id_Proj") %>" required>
                         <div class="form-group">
                             <label for="date_debut">Date_debut</label>
-                            <input type="date" class="form-control" id="date_debut" name="date_debut" placeholder="date_debut">
+                            <input type="date" class="form-control" id="date_debut" name="date_debut" placeholder="date_debut" required>
                         </div>
                         <div class="form-group">
                             <label for="date_fin">Date_fin</label>
-                            <input type="date" class="form-control" id="date_fin" name="date_fin" placeholder="date_fin">
+                            <input type="date" class="form-control" id="date_fin" name="date_fin" placeholder="date_fin required" required>
                         </div>
                         <div class="form-group">
                             <label for="description">Description</label>
-                            <input type="text" class="form-control" id="description" name="description" placeholder="description">
+                            <input type="text" class="form-control" id="description" name="description" placeholder="description" required>
                         </div>
                         <div class="form-group">
                             <select class="form-control" id="Statu" name="Statu">

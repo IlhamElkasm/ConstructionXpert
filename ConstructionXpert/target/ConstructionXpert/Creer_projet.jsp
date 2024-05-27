@@ -17,26 +17,26 @@
                         <h2 class="card-title">Créer Projet</h2>
                     </div>
                     <div class="card-body">
-                        <form action="add_Projet" method="post">
+                        <form action="add_Projet" method="post" name="Addprojet" onsubmit="return validateForm()">
                         <div class="form-group">
                                 <label for="nom_proj">Nom_Projet</label>
-                                <input type="text" class="form-control" id="nom_proj" name="nom_proj" placeholder="nom_proj">
+                                <input type="text" class="form-control" id="nom_proj" name="nom_proj" placeholder="nom_proj" required>
                             </div>
                             <div class="form-group">
                                 <label for="budget">budget</label>
-                                <input type="number" class="form-control" id="budget" name="budget" placeholder="budget">
+                                <input type="number" class="form-control" id="budget" name="budget" placeholder="budget" required>
                             </div>
                              <div class="form-group">
                                 <label for="description">Description</label>
-                                <input type="text" class="form-control" id="description" name="description" placeholder="Description">
+                                <input type="text" class="form-control" id="description" name="description" placeholder="Description" required>
                              </div>
                             <div class="form-group">
                                 <label for="date_debut">Date_debut</label>
-                                <input type="date" class="form-control" id="date_debut" name="date_debut" placeholder="date_debut">
+                                <input type="date" class="form-control" id="date_debut" name="date_debut" placeholder="date_debut" required>
                             </div>
                             <div class="form-group">
                                 <label for="date_fin">Date_fin</label>
-                                <input type="date" class="form-control" id="date_fin" name="date_fin" placeholder="date_fin">
+                                <input type="date" class="form-control" id="date_fin" name="date_fin" placeholder="date_fin" required>
                             </div>
                             <div class="container test-center">
                             <button type="submit" class="btn btn-success btn-warning">Add</button>
@@ -48,6 +48,15 @@
         </div>
     </div>
 
+    <script>
+        function validateForm() {
+            let x = document.forms["Addprojet"]["Addprojet"].value;
+            if (x == "") {
+                alert("form must be filled out");
+                return false;
+            }
+        }
+    </script>
     <!-- Include Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
